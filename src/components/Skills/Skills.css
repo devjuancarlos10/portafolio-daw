@@ -1,0 +1,193 @@
+.skills {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-4xl) 0;
+}
+
+.skills__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.skills__header {
+  margin-bottom: var(--space-3xl);
+  max-width: 560px;
+}
+
+.skills__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+}
+
+/* Skill Categories */
+.skills__category {
+  margin-bottom: var(--space-2xl);
+}
+
+.skills__category-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.skills__category-title svg {
+  color: var(--color-accent);
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Skill Bar */
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-bar__name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.skill-bar__percent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.skill-bar__track {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-bg-muted);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+  border-radius: var(--radius-full);
+  transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tool Badges */
+.skills__tools {
+  margin-top: var(--space-2xl);
+}
+
+.skills__tools-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.skills__tools-title svg {
+  color: var(--color-accent);
+}
+
+.skills__tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skills__tool-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+  cursor: default;
+  letter-spacing: 0.02em;
+}
+
+.skills__tool-badge:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-pure);
+  border-color: var(--color-text-primary);
+  transform: translateY(-2px);
+}
+
+/* Philosophy Cards */
+.skills__philosophy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.philosophy-card {
+  padding: var(--space-xl);
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+}
+
+.philosophy-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.philosophy-card__icon {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.philosophy-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.philosophy-card__description {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 968px) {
+  .skills__content {
+    grid-template-columns: 1fr;
+  }
+}
